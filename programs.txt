@@ -1,0 +1,166 @@
+Computer science graduate with a passion for software engineering and software development. Proficient in ASP.NET and Java, with a strong foundation in data structures and algorithms. Eager to apply problem-solving skills and contribute to a dynamic team z > (x > y ? x : y) ? 1) z : ((x > y) ? x : y);
+
+5) import java.io.*; 
+  
+class GFG { 
+      
+    // Function to find the nth term of series 
+    static int term(int n) 
+    {      
+        // Loop to add numbers 
+        int ans = 0; 
+        for (int i = 1; i <= n; i++)  
+            ans += i;  
+          
+        return ans; 
+    } 
+  
+      
+    // Driver code 
+    public static void main(String args[]) 
+    { 
+        int n = 4; 
+        System.out.println(term(n)); 
+    } 
+} 
+
+
+9)  // Java Program to Remove Duplicate Elements
+// From the Array using extra space
+ 
+public class Main {
+ 
+    public static int removeduplicates(int a[], int n)
+    {
+        if (n == 0 || n == 1) {
+            return n;
+        }
+ 
+        // creating another array for only storing
+        // the unique elements
+        int[] temp = new int[n];
+        int j = 0;
+ 
+        for (int i = 0; i < n - 1; i++) {
+            if (a[i] != a[i + 1]) {
+                temp[j++] = a[i];
+            }
+        }
+ 
+        temp[j++] = a[n - 1];
+ 
+        // Changing the original array
+        for (int i = 0; i < j; i++) {
+            a[i] = temp[i];
+        }
+ 
+        return j;
+    }
+    public static void main(String[] args)
+    {
+        int a[] = { 1, 1, 2, 2, 2 };
+        int n = a.length;
+ 
+        n = removeduplicates(a, n);
+ 
+        // Printing The array elements
+        for (int i = 0; i < n; i++)
+            System.out.print(a[i] + " ");
+    }
+}
+
+
+6)import java.io.*;
+ 
+class EvenOddSum {
+    public static void main(String args[])
+    {
+        int arr[] = { 1, 2, 3, 4, 5, 6 };
+        int even = 0, odd = 0;
+ 
+        // Loop to find even, odd sum
+        for (int i = 0; i < arr.length; i++) {
+            if (i % 2 == 0)
+                even += arr[i];
+            else
+                odd += arr[i];
+        }
+ 
+        System.out.println("Even index positions sum: " + even);
+        System.out.println("Odd index positions sum: " + odd);
+    }
+}
+
+
+last) static void main(){
+Console.write("Enter a string:
+string hello = console.readline();
+int size = hello.Length;
+
+for(int i=0;i<=size;i++){
+console.write(hello.Substring(0,i));
+int numSpaces = (size-i) * 2;
+for int j=0;j<numSpaces;j++){
+Console.write("");
+}
+Console.writeline(hello.Substring(0,i));
+}
+}
+
+
+10)// Java Program to Print Square Pattern
+// Case 1: Hollow rectangle
+ 
+// Importing input output classes
+import java.io.*;
+ 
+// Main class
+class GFG {
+ 
+    // Method 1
+    // To print hollow rectangle
+    static void print_rectangle(int k, int l)
+    {
+        int a, b;
+ 
+        // Nested for loops for iterations
+ 
+        // Outer loop for rows
+        for (a = 1; a <= k; a++) {
+            // Inner loop for columns
+            for (b = 1; b <= l; b++) {
+                // Condition check using logical OR operator
+                // over rows and columns positions
+                // if found at circumference of rectangle
+                if (a == 1 || a == k || b == 1 || b == l)
+ 
+                    // Print the star pattern
+                    System.out.print("*");
+                else
+ 
+                    // Rest inside square print the empty
+                    // spaces
+                    System.out.print(" ");
+            }
+ 
+            // By now we are done with only 1 row so
+            // New line
+            System.out.println();
+        }
+    }
+ 
+    // Method 2
+    // Main driver method
+    public static void main(String args[])
+    {
+        // Declaring and initializing rows and columns
+        // For square row = columns
+ 
+        // Custom input initialization values
+        int rows = 8, columns = 22;
+ 
+        // Calling the method1 to print hollow rectangle
+        // pattern
+        print_rectangle(rows, columns);
+    }
+}
